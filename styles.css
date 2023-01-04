@@ -2,9 +2,17 @@
     margin: 0;
     padding: 0;
 }
+@font-face{
+    font-family: 'funky';
+    src: url('fonts/trivia-game-font-collection/blomberg-84442/Blomberg-8MKKZ.otf')
+}
 body {
     background-image: url('images/Sheen_The_God.webp');
     background-size: cover;
+}
+h1 {
+    font-size: 5em;
+    padding: 15px;
 }
 .index-content {
     background-color: white;
@@ -19,8 +27,9 @@ body {
     text-align: center;
 }
 .title {
-    padding: 100px;
+    padding: 80px;
     transform: translateY(-100px);
+    font-family: 'funky';
 }
 .instructions {
     padding: 50px;
