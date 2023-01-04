@@ -7,16 +7,15 @@
     src: url('fonts/trivia-game-font-collection/blomberg-84442/Blomberg-8MKKZ.otf')
 }
 body {
-    background-image: url('images/Sheen_The_God.webp');
+    background-image: url('images/dall.e\ question\ mark.png');
     background-size: cover;
 }
 h1 {
     font-size: 5em;
-    padding: 15px;
+    padding: 20px;
 }
 .index-content {
-    background-color: white;
-    opacity: .5;
+    background-color: rgba(255,255,255, .9);
     position: fixed;
     height: 100%;
     width: 100%;
@@ -27,10 +26,26 @@ h1 {
     text-align: center;
 }
 .title {
-    padding: 80px;
+    padding: 50px;
     transform: translateY(-100px);
     font-family: 'funky';
 }
 .instructions {
-    padding: 50px;
+    padding: 20px;
+}
+.instructions-btn {
+    padding: 15px 40px;
+    border-radius: 10px;
+    border: 2px black solid;
+    background-color: white;
+    transition: all .2s ease;
+    box-shadow: black 0px 7px 0px 0px;
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-weight:bold;
+}
+.instructions-btn:hover {
+    box-shadow: black 0px 4px 0px 0px;
+    cursor: pointer;
+    transform: scale(.9);
 }
