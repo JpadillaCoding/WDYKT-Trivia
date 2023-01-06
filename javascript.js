@@ -48,6 +48,6 @@ function nextPg() {
     let slidesArg = document.querySelectorAll('.question')
     console.log(slidesArg)
     slidesArg[questionNum].classList.remove('active')
-    questionNum +=1
+    questionNum ++
     slidesArg[questionNum].classList.add('active')
 }
