@@ -25,9 +25,9 @@ function instPage() {
         location.href = 'game.html'
     }
 }
-answer.addEventListener('click', clicked)
-function clicked(e) {
-    console.log(e)
+answer.addEventListener('click', response)
+function response(e) {
+
         if(e.target.localName =='button'){
             if(e.target.className=='btn correct'){
                 e.target.style.backgroundColor='rgba(34, 251, 46, 0.8)'
@@ -41,4 +41,12 @@ function clicked(e) {
         else{
             return;
         }
+}
+let questionNum = 1
+next.addEventListener('click', nextPg)
+function nextPg() { 
+    let currentSlide = document.querySelector(`[data-questionNum = '${questionNum}']`)
+    currentSlide.className='question'
+    currentSlide += 1
+    currentSlide.className='question active'
 }
