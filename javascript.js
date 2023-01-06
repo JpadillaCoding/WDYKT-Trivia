@@ -30,7 +30,13 @@ function clicked(e) {
     console.log(e)
         if(e.target.localName =='button'){
             if(e.target.className=='btn correct'){
-                next.style.display =' block'
+                e.target.style.backgroundColor='green'
             }
+            else {
+                e.target.style.backgroundColor='red'
+            }
+        }
+        else{
+            return;
         }
 }
