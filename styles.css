@@ -7,7 +7,7 @@
 margin: 0;
 padding: 0;
 }
-.index-body, .inst-body{
+.index-body, .inst-body, .game-body{
     background-image: url('images/dall.e\ question\ mark.png');
     background-size: cover;
 }
@@ -63,6 +63,7 @@ padding: 0;
 }
 .inst-main p {
     font-family: 'Josefin Sans', 'sans-setif';
+    line-height: 1.4;
 }
 .inst-main ul {
     list-style-type: none;
@@ -74,4 +75,86 @@ padding: 0;
 }
 .inst-btn {
     margin-top: 50px
+}
+.game-content {
+    background-color: rgba(255,255,255, .95);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .2fr 2fr .2fr;
+    grid-template-areas: 
+    "title title"
+    "game-question game-question"
+    "next next";
+}
+
+.game-title {
+    grid-area: title;
+    font-family: 'funky';
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+
+}
+.game-question {
+    grid-area: game-question;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.game-answer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+#answer1 {
+    background-color: lightgreen;
+    grid-area: answer1;
+}
+#answer2 {
+    background-color: lightcoral;
+    grid-area: answer2;
+}
+#answer3 {
+    background-color: lightseagreen;
+    grid-area: answer3;
+}
+#answer4 {
+    background-color: lightskyblue;
+    grid-area: answer4;
+}
+.next {
+    background-color: antiquewhite;
+    grid-area: next;
+}
+.question {
+    grid-area: question;
+    display: none;
+    font-family: 'josefin sans', sans-serif;
+    font-size: 25px;
+}
+.img {
+    height: 200px;
+    width: 400px;
+    border-radius: 10px;
+    border: 2px black solid;
+    margin-bottom: 15px;
+}
+.active {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "question question"
+    "answer1 answer2"
+    "answer3 answer4";
+}
+.next {
+    text-align: center;
+    display: none;
 }
