@@ -42,11 +42,12 @@ function response(e) {
             return;
         }
 }
-let questionNum = 1
+let questionNum = 0
 next.addEventListener('click', nextPg)
 function nextPg() { 
-    let currentSlide = document.querySelector(`[data-questionNum = '${questionNum}']`)
-    currentSlide.className='question'
-    currentSlide += 1
-    currentSlide.className='question active'
+    let slidesArg = document.querySelectorAll('.question')
+    console.log(slidesArg)
+    slidesArg[questionNum].classList.remove('active')
+    questionNum +=1
+    slidesArg[questionNum].classList.add('active')
 }
