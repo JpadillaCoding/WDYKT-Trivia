@@ -120,7 +120,8 @@ html, body {
 }
 .game-answer:hover{
     transform: scale(.95);
-    box-shadow:  black 0px 4px 0px 0px;;
+    box-shadow:  black 0px 4px 0px 0px;
+    cursor: pointer;
 }
 #answer1 {
     grid-area: answer1;
@@ -187,6 +188,3 @@ html, body {
     top: 30px;
     right: 50px;
 }
-/* p > * {
-    pointer-events: none;
-} */

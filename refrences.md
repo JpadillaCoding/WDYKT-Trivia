@@ -12,3 +12,4 @@ https://techcrunch.com/2022/05/25/amazon-flexes-its-retail-muscle-with-a-brick-a
 https://territorialseed.com/products/brussels-sprout-igor
 http://www.lovethatimage.com/blog/2013/01/fresh-vegetable-plate/
 https://www.ehs.washington.edu/research-lab/compressed-gas-cryogenic-fluids
+https://www.eatright.org/food/food-groups/vegetables/the-beginners-guide-to-cruciferous-vegetables
