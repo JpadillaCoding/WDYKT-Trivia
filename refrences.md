@@ -1,0 +1,14 @@
+fonts : 
+https://www.fontspace.com/blomberg-font-f84442
+
+index background : 
+https://openai.com/dall-e-2/
+
+images: 
+https://www.istockphoto.com/photo/group-gathered-around-campfire-in-the-woods-gm171344295-21183555
+https://www.techexplorist.com/human-skin-evolved-durable-flexible-possible/46933/
+https://animals.sandiegozoo.org/animals/chinchilla
+https://techcrunch.com/2022/05/25/amazon-flexes-its-retail-muscle-with-a-brick-and-mortar-clothing-store/
+https://territorialseed.com/products/brussels-sprout-igor
+http://www.lovethatimage.com/blog/2013/01/fresh-vegetable-plate/
+https://www.ehs.washington.edu/research-lab/compressed-gas-cryogenic-fluids

@@ -47,16 +47,12 @@ function check(choice) {
         next.style.display='block'
         correct ++
         accuracy = Math.floor((correct/total)*100)
-        counter.innerHTML =`Accuracy: ${accuracy}`
-        /*Stops the user from being able to keep clicking the correct answer. This was causing an 
-        issues that you could keep adding to the score on the same question with multiple clicks*/ 
+        counter.innerHTML =`Accuracy: ${accuracy}%`
         siblings(choice)
     }
     else {
         choice.target.style.backgroundColor='rgba(255, 72, 72, 0.8)'
         next.style.display='block'
-        /* User was able to click on other choices after clcking a wrong answer. This 
-        removed that bug since the right answer can be clicked afetr clickign a wrong one*/
         siblings(choice)
     }
 }
@@ -73,13 +69,15 @@ function nextPg() {
         slidesArg[questionNum].classList.remove('active')
         if(accuracy >= 80) {
 
-            win.classList.add('active')
+            win.classList.add('outcome')
         }
         else {
-            lost.classList.add('active')
+            lost.classList.add('outcome')
         }
     }
 }
+/* User was a ble to click on other answers after choosing a response. User was able to
+add to the score even when they got the wrong answer. */
 function siblings(choice) {
 
     let siblings = choice.target.parentElement.children
