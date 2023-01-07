@@ -7,9 +7,13 @@
 margin: 0;
 padding: 0;
 }
+html, body {
+    height: 100%;
+}
 .index-body, .inst-body, .game-body{
     background-image: url('images/dall.e\ question\ mark.png');
     background-size: cover;
+    height: 100%;
 }
 .index-title h1 {
     font-size: 5em;
@@ -41,7 +45,7 @@ padding: 0;
     box-shadow: black 0px 7px 0px 0px;
     font-size: 15px;
     letter-spacing: 3px;
-    font-weight:bold;
+    font-weight: bold;
 }
 .btn:hover {
     box-shadow: black 0px 4px 0px 0px;
@@ -78,12 +82,10 @@ padding: 0;
 }
 .game-content {
     background-color: rgba(255,255,255, .95);
-    position: fixed;
     height: 100%;
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: .2fr 2fr .2fr;
+    grid-template-rows: .3fr .3fr .3fr;
     grid-template-areas: 
     "title"
     "game-question"
@@ -97,7 +99,7 @@ padding: 0;
     justify-content:space-between;
     align-items: center;
     font-size: 40px;
-    margin-top: 20px;
+    margin: 20px 5px auto 5px;
 
 }
 .game-question {
@@ -107,7 +109,10 @@ padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: column;
     border: 1px solid black;
+    border-radius: 10px;
+
 }
 #answer1 {
     grid-area: answer1;
@@ -145,6 +150,8 @@ padding: 0;
 }
 .active {
     display: grid;
+    grid-gap: 2px;
+    margin: 5px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr .2fr .5fr .5fr;
     grid-template-areas: 
@@ -161,4 +168,7 @@ padding: 0;
     position: absolute;
     top: 30px;
     right: 50px;
+}
+p > * {
+    pointer-events: none;
 }

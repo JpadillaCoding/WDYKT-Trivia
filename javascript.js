@@ -35,12 +35,40 @@ function instPage() {
         location.href = 'game.html'
     }
 }
-answer.addEventListener('click', response)
+
+
+let answerChoice = document.querySelectorAll('.game-answer')
+
+answerChoice.forEach(choice => {
+    choice.addEventListener('click', check)
+})
+function check(choice) {
+    console.log(choice)
+    if (choice.target.id=='correct') {
+        choice.target.style.backgroundColor='rgba(34, 251, 46, 0.8)'
+        next.style.display='block'
+        correct ++
+        accuracy = Math.floor((correct/total)*100)
+        counter.innerHTML =`Accuracy: ${accuracy}`
+    }
+    else {
+        choice.target.style.backgroundColor='rgba(255, 72, 72, 0.8)'
+        next.style.display='block'
+    }
+}
+
+
+
+
+
+
+
+/* answer.addEventListener('click', response)
 function response(e) {
-/*         Changes the buttons color depending if it was a correct class or not. 
-        adds to accuracy when correct button is added */
-        if(e.target.localName =='button'){
-            if(e.target.className=='btn correct'){
+//        Changes the buttons color depending if it was a correct class or not. 
+ //       adds to accuracy when correct button is added 
+        if(e.target.className =='game-answer'){
+            if(e.target.id=='correct'){
                 e.target.style.backgroundColor='rgba(34, 251, 46, 0.8)'
                 next.style.display='block'
                 correct ++
@@ -55,7 +83,7 @@ function response(e) {
         else{
             return;
         }
-}
+} */
 next.addEventListener('click', nextPg)
 function nextPg() { 
     next.style.display='none'
