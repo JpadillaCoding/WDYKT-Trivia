@@ -94,7 +94,7 @@ padding: 0;
     grid-area: title;
     font-family: 'funky';
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
     align-items: center;
     font-size: 40px;
     margin-top: 20px;
