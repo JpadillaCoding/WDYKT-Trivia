@@ -85,16 +85,16 @@ padding: 0;
     grid-template-columns: 1fr;
     grid-template-rows: .2fr 2fr .2fr;
     grid-template-areas: 
-    "title title"
-    "game-question game-question"
-    "next next";
+    "title"
+    "game-question"
+    "next";
 }
 
 .game-title {
     grid-area: title;
     font-family: 'funky';
     display: flex;
-    justify-content:space-around;
+    justify-content:space-between;
     align-items: center;
     font-size: 40px;
     margin-top: 20px;
@@ -131,18 +131,25 @@ padding: 0;
     font-size: 25px;
 }
 .img {
+    grid-area: img;
     height: 200px;
     width: 400px;
     border-radius: 10px;
     border: 2px black solid;
-    margin-bottom: 15px;
+    display: block;
+    margin: auto auto 15px auto;
+}
+.text {
+    grid-area: text;
+    text-align: center;
 }
 .active {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr .5fr .5fr;
+    grid-template-rows: 1fr .2fr .5fr .5fr;
     grid-template-areas: 
-    "question question"
+    "img img "
+    'text text'
     "answer1 answer2"
     "answer3 answer4";
 }
