@@ -4,9 +4,12 @@ let answer = document.querySelector('.game-question')
 let next = document.querySelector('.next')
 let slidesArg = document.querySelectorAll('.question')
 let counter = document.querySelector('.counter')
+let win = document.querySelector('#win')
+let lost = document.querySelector('#lost')
 let questionNum = 0
 let total = slidesArg.length-2
 let correct = 0
+let accuracy = 0
 
 
 switch(page) {
@@ -41,7 +44,8 @@ function response(e) {
                 e.target.style.backgroundColor='rgba(34, 251, 46, 0.8)'
                 next.style.display='block'
                 correct ++
-                counter.innerHTML =`Accuracy:${Math.floor((correct/total)*100)}`
+                accuracy = Math.floor((correct/total)*100)
+                counter.innerHTML =`Accuracy: ${accuracy}`
             }
             else {
                 e.target.style.backgroundColor='rgba(255, 72, 72, 0.8)'
@@ -54,12 +58,21 @@ function response(e) {
 }
 next.addEventListener('click', nextPg)
 function nextPg() { 
-    if ((questionNum + 1) < total) {
     next.style.display='none'
+    if ((questionNum + 1) < total) {
     slidesArg[questionNum].classList.remove('active')
     questionNum ++
     slidesArg[questionNum].classList.add('active')
     }
+    else {
+        slidesArg[questionNum].classList.remove('active')
+        if(accuracy >= 80) {
+
+            win.classList.add('active')
+        }
+        else {
+            lost.classList.add('active')
+        }
+    }
 }
-//modify the accuracy counter
-//use the accuracy counter to add into the innerhtml
+console.log(win)
