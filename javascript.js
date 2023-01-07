@@ -53,6 +53,14 @@ function check(choice) {
     else {
         choice.target.style.backgroundColor='rgba(255, 72, 72, 0.8)'
         next.style.display='block'
+
+        let siblings2 = choice.target.parentElement.children
+        Array.from(siblings2).forEach((sibling) => {
+            if(sibling.id=='correct') {
+                sibling.style.backgroundColor='rgba(34, 251, 46, 0.8)'
+            }
+        })
+
         siblings(choice)
     }
 }
