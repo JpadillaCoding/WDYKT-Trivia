@@ -2,6 +2,8 @@
 let page = document.body.className
 let answer = document.querySelector('.game-question')
 let next = document.querySelector('.next')
+let slidesArg = document.querySelectorAll('.question')
+let questionNum = 0
 switch(page) {
     case 'index-body':
         indexPage();
@@ -42,11 +44,10 @@ function response(e) {
             return;
         }
 }
-let questionNum = 0
 next.addEventListener('click', nextPg)
 function nextPg() { 
-    let slidesArg = document.querySelectorAll('.question')
-    console.log(slidesArg)
+    console.log(questionNum, slidesArg.length)
+    next.style.display='none'
     slidesArg[questionNum].classList.remove('active')
     questionNum ++
     slidesArg[questionNum].classList.add('active')

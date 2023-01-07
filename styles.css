@@ -93,7 +93,9 @@ padding: 0;
 .game-title {
     grid-area: title;
     font-family: 'funky';
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 40px;
     margin-top: 20px;
 
@@ -113,23 +115,18 @@ padding: 0;
     border: 1px solid black;
 }
 #answer1 {
-    background-color: lightgreen;
     grid-area: answer1;
 }
 #answer2 {
-    background-color: lightcoral;
     grid-area: answer2;
 }
 #answer3 {
-    background-color: lightseagreen;
     grid-area: answer3;
 }
 #answer4 {
-    background-color: lightskyblue;
     grid-area: answer4;
 }
 .next {
-    background-color: antiquewhite;
     grid-area: next;
 }
 .question {
@@ -157,4 +154,9 @@ padding: 0;
 .next {
     text-align: center;
     display: none;
+}
+.score {
+    position: absolute;
+    top: 30px;
+    right: 50px;
 }
