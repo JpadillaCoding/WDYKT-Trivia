@@ -50,17 +50,14 @@ function check(choice) {
         counter.innerHTML =`Accuracy: ${accuracy}`
         /*Stops the user from being able to keep clicking the correct answer. This was causing an 
         issues that you could keep adding to the score on the same question with multiple clicks*/ 
-        choice.target.removeEventListener('click',check)
+        siblings(choice)
     }
     else {
         choice.target.style.backgroundColor='rgba(255, 72, 72, 0.8)'
         next.style.display='block'
         /* User was able to click on other choices after clcking a wrong answer. This 
-        removed that bug */
-        let siblings = choice.target.parentElement.children
-        Array.from(siblings).forEach((sibling) => {
-            sibling.removeEventListener('click',check)
-        })
+        removed that bug since the right answer can be clicked afetr clickign a wrong one*/
+        siblings(choice)
     }
 }
 
@@ -82,4 +79,11 @@ function nextPg() {
             lost.classList.add('active')
         }
     }
+}
+function siblings(choice) {
+
+    let siblings = choice.target.parentElement.children
+    Array.from(siblings).forEach((sibling) => {
+        sibling.removeEventListener('click',check)
+    })
 }

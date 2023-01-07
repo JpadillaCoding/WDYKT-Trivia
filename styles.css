@@ -111,6 +111,7 @@ html, body {
     align-items: center;
     flex-flow: column;
     border: 1px solid black;
+    background-color: white;
     border-radius: 10px;
 
 }
@@ -138,10 +139,11 @@ html, body {
 .img {
     grid-area: img;
     height: 200px;
-    width: 400px;
+    width: 300px;
     border-radius: 10px;
     border: 2px black solid;
     display: block;
+    object-fit: cover;
     margin: auto auto 15px auto;
 }
 .text {
