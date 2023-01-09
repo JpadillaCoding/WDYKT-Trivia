@@ -60,7 +60,7 @@ function gamePage(){
 
         let answerChoiceSiblings = choice.target.parentElement.children
 
-        if (choice.target.id=='correct') {
+        if (choice.target.classList=='game-answer correct') {
             choice.target.style.backgroundColor= 'rgba(34, 251, 46, 0.7)'
             next.style.display='block'
             correctAnswers ++
@@ -108,7 +108,7 @@ function gamePage(){
     }
     function siblingColorChange(answerChoiceSiblings) {
         Array.from(answerChoiceSiblings).forEach((sibling) => {
-            if(sibling.id=='correct') {
+            if(sibling.classList=='game-answer correct') {
                 sibling.style.backgroundColor = 'rgba(34, 251, 46, 0.7)'
             }
         })

@@ -32,7 +32,7 @@ html, body {
 .index-title {
     padding: 50px;
     transform: translateY(-100px);
-    font-family: 'funky';
+    font-family: 'funky', sans-serif;
 }
 
 .btn {
@@ -55,7 +55,7 @@ html, body {
     justify-content: flex-start;
 }
 .inst-title {
-    font-family: 'funky';
+    font-family: 'funky', sans-serif;
     font-size: 40px;
     padding: 20px;
 }
@@ -65,7 +65,7 @@ html, body {
 }
 .inst-main h2 {
     padding: 20px;
-    font-family: 'funky';
+    font-family: 'funky', sans-serif;
     font-size: 28px;
 }
 .inst-main ul {
@@ -87,7 +87,7 @@ html, body {
 
 .game-title {
     grid-area: title;
-    font-family: 'funky';
+    font-family: 'funky', sans-serif;
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -144,7 +144,7 @@ html, body {
     justify-content: center;
     flex-direction: column;
     gap: 20px;
-    font-family: 'funky';
+    font-family: 'funky', sans-serif;
     font-size: 30px;
 }
 .img {
