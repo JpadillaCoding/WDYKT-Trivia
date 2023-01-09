@@ -3,7 +3,7 @@ A Trivia game made with the tid-bit information I know about the world. Featurin
     
 ## View the Demo
     
-Visit my github [page](https://jpadillacoding.github.io/Accordion-Menu/)!
+Visit my github [page](https://jpadillacoding.github.io/WDYKT-Trivia/)!
 
 ## Instructions
 
