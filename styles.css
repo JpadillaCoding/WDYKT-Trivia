@@ -84,7 +84,7 @@ html, body {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: .3fr .3fr .3fr;
+    grid-template-rows: .3fr .8fr .3fr;
     grid-template-areas: 
     "title"
     "game-question"
@@ -145,10 +145,11 @@ html, body {
     font-size: 25px;
 }
 .outcome {
-    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 20px;
     font-family: 'funky';
     font-size: 30px;
 }
@@ -182,6 +183,8 @@ html, body {
 .next {
     text-align: center;
     display: none;
+    transform: translateY(30px);
+
 }
 .score {
     position: absolute;
@@ -190,7 +193,7 @@ html, body {
 }
 @media(max-width: 620px) {
     .inst-title, .game-title {
-        font-size: 30px;
+        font-size: 20px;
     }
     .inst-main {
         padding: 10px;
