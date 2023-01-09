@@ -81,7 +81,7 @@ html, body {
     grid-template-rows: .3fr .9fr .3fr;
     grid-template-areas: 
     "title"
-    "game-question"
+    "game-question-wrapper"
     "next";
 }
 
@@ -95,8 +95,8 @@ html, body {
     margin: 20px 5px auto 5px;
 
 }
-.game-question {
-    grid-area: game-question;
+.game-question-wrapper {
+    grid-area: game-question-wrapper;
     display: flex;
     justify-content: center;
     align-items: center;

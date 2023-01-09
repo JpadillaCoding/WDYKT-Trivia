@@ -2,15 +2,16 @@
 let page = document.body.className
 let next = document.querySelector('.next')
 let slidesArg = document.querySelectorAll('.question')
-let counter = document.querySelector('.counter')
+let counter = document.querySelector('.accuracy-percentage')
 let win = document.querySelector('#win')
 let lost = document.querySelector('#lost')
-let questionNum = 0
-let total = slidesArg.length-2
-let correct = 0
+let questionIndex = 0
+let totalSlides = slidesArg.length-2 //2 is subratracted since question class has 2 extra pages that aren't actually questions
+let correctAnswers = 0
 let accuracy = 0
 
 
+//switch case used to load code needed per each html doc. Works by checking the body's class name
 switch(page) {
     case 'index-body':
         indexPage();
@@ -37,8 +38,9 @@ function instPage() {
         location.href = 'game.html'
     }
 }
+
 function gamePage(){
-    let playAgainButton = document.querySelectorAll('.playAgainBtn')
+    let playAgainButton = document.querySelectorAll('.play-again-btn')
 
     playAgainButton.forEach((playAgain) => {
         playAgain.onclick = function() {
@@ -46,46 +48,48 @@ function gamePage(){
         }
     })
 
-
+    /*Goes through each answer choice and adds an event listener for adding into the 
+    accuracy counter and having the proper colors used for right or wrong answers.*/
     let answerChoice = document.querySelectorAll('.game-answer')
 
     answerChoice.forEach(choice => {
         choice.addEventListener('click', check)
     })
+
     function check(choice) {
+
+        let answerChoiceSiblings = choice.target.parentElement.children
+
         if (choice.target.id=='correct') {
-            choice.target.style.backgroundColor='rgba(34, 251, 46, 0.8)'
+            choice.target.style.backgroundColor= 'rgba(34, 251, 46, 0.7)'
             next.style.display='block'
-            correct ++
-            accuracy = Math.floor((correct/total)*100)
+            correctAnswers ++
+            accuracy = Math.floor((correctAnswers/totalSlides)*100)
             counter.innerHTML =`Accuracy: ${accuracy}%`
-            siblings(choice)
+            removeEvent(answerChoiceSiblings)
         }
         else {
-            choice.target.style.backgroundColor='rgba(255, 72, 72, 0.8)'
+            choice.target.style.backgroundColor = 'rgba(255, 72, 72, 0.8)'
             next.style.display='block'
 
-            let siblings2 = choice.target.parentElement.children
-            Array.from(siblings2).forEach((sibling) => {
-                if(sibling.id=='correct') {
-                    sibling.style.backgroundColor='rgba(34, 251, 46, 0.8)'
-                }
-            })
-
-            siblings(choice)
+            siblingColorChange(answerChoiceSiblings)
+            removeEvent(answerChoiceSiblings)
         }
     }
-
+    //Takes the user into the next question.
     next.addEventListener('click', nextPg)
     function nextPg() { 
+        /*Next btn hides after every click to make sure user doesn't skip questions
+        is also only shown after the user chooses an answer*/
         next.style.display='none'
-        if ((questionNum + 1) < total) {
-        slidesArg[questionNum].classList.remove('active')
-        questionNum ++
-        slidesArg[questionNum].classList.add('active')
+        if ((questionIndex + 1) < totalSlides) {
+        slidesArg[questionIndex].classList.remove('active')
+        questionIndex ++
+        slidesArg[questionIndex].classList.add('active')
         }
         else {
-            slidesArg[questionNum].classList.remove('active')
+            //Takes the user to the win or lose page
+            slidesArg[questionIndex].classList.remove('active')
             if(accuracy >= 80) {
 
                 win.classList.add('outcome')
@@ -95,13 +99,18 @@ function gamePage(){
             }
         }
     }
-    /* User was a ble to click on other answers after choosing a response. User was able to
-    add to the score even when they got the wrong answer. */
-    function siblings(choice) {
-
-        let siblings = choice.target.parentElement.children
-        Array.from(siblings).forEach((sibling) => {
+    /* User was able to click on other answers after choosing a response. User was able to
+    add to the score even when they got the wrong answer. Following code fixes that bug*/
+    function removeEvent(answerChoiceSiblings) {
+        Array.from(answerChoiceSiblings).forEach((sibling) => {
             sibling.removeEventListener('click',check)
+        })
+    }
+    function siblingColorChange(answerChoiceSiblings) {
+        Array.from(answerChoiceSiblings).forEach((sibling) => {
+            if(sibling.id=='correct') {
+                sibling.style.backgroundColor = 'rgba(34, 251, 46, 0.7)'
+            }
         })
     }
 }
