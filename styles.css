@@ -11,16 +11,18 @@ html, body {
     height: 100%;
 }
 .index-body, .inst-body, .game-body{
-    background-image: url('images/dall.e\ question\ mark.png');
     background-size: cover;
+    background-image: 
+    linear-gradient( rgba(255,255,255, .95),rgba(255,255,255, .95) ),
+    url('images/dall.e\ question\ mark.png');
     height: 100%;
+    background-repeat: no-repeat;
 }
 .index-title h1 {
     font-size: 5em;
     padding: 20px;
 }
 .index-content, .inst-content{
-    background-color: rgba(255,255,255, .95);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,7 +81,6 @@ html, body {
     margin: 20px;
 }
 .game-content {
-    background-color: rgba(255,255,255, .95);
     height: 100%;
     display: grid;
     grid-template-columns: 1fr;
@@ -186,4 +187,12 @@ html, body {
     position: absolute;
     top: 30px;
     right: 50px;
+}
+@media(max-width: 620px) {
+    .inst-title, .game-title {
+        font-size: 30px;
+    }
+    .inst-main {
+        padding: 10px;
+    }
 }
