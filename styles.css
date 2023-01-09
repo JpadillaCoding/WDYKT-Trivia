@@ -16,7 +16,6 @@ html, body {
     linear-gradient( rgba(255,255,255, .95),rgba(255,255,255, .95) ),
     url('images/dall.e\ question\ mark.png');
     height: 100%;
-    background-repeat: no-repeat;
 }
 .index-title h1 {
     font-size: 5em;
@@ -60,22 +59,17 @@ html, body {
     font-size: 40px;
     padding: 20px;
 }
+.inst-main{
+    font-family: 'Josefin Sans', 'sans-setif';
+    font-size: 20px;
+}
 .inst-main h2 {
     padding: 20px;
     font-family: 'funky';
     font-size: 28px;
 }
-.inst-main p {
-    font-family: 'Josefin Sans', 'sans-setif';
-    line-height: 1.4;
-}
 .inst-main ul {
     list-style-type: none;
-}
-.inst-main li {
-    font-family:'Josefin Sans', sans-serif;
-    font-size: 18px;
-    padding: 4px;
 }
 .inst-btn {
     margin: 20px;
@@ -84,7 +78,7 @@ html, body {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: .3fr .8fr .3fr;
+    grid-template-rows: .3fr .9fr .3fr;
     grid-template-areas: 
     "title"
     "game-question"
@@ -197,5 +191,6 @@ html, body {
     }
     .inst-main {
         padding: 10px;
+        font-size: 17px;
     }
 }
