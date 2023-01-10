@@ -106,6 +106,7 @@ function gamePage(){
             sibling.removeEventListener('click',check)
         })
     }
+    
     function siblingColorChange(answerChoiceSiblings) {
         Array.from(answerChoiceSiblings).forEach((sibling) => {
             if(sibling.classList=='game-answer correct') {
