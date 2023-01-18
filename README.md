@@ -65,6 +65,12 @@ function check(choice) {
 }
 ```
 The function checks for the hard coded `correct` class and changes styling to green or red depending if the right choice was picked. Accuracy is calculated everytime a button is clicked and updated live using a templete literal. Colors are changed by taking advantage of the DOM's styling property. 
+
+## AI Usage 
+
+I chose this challenge/issue I faced as it's own section to highlight the utility of AI. It was a trivial problem <em>every</em> developer faces- my background image. I couldn't find any images that fit my criteria. The image needed to be various cartoon styled questions marks, greyscaled, and there had to be a lot of them with variability in the style. Google could only find corportate clipart of question marks and I needed something fun! 
+[Dall.e](https://openai.com/dall-e-2/) has mainstreamed AI usage to make art, voice to text, music, etc. Why scroll through various google images trying to find something specific when I can use an AI art generator? Heck, I've seen people ask the AI for a squirrel in a knights armor, why couldnt I ask it for cartoon questions marks? This definitely saved me time and a headache of having to find the <em>perfect</em> background image. My fellow developers see AI as a threat, but I see it as a tool. 
+
 ## Built With
 
 ![Javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
@@ -75,6 +81,7 @@ The function checks for the hard coded `correct` class and changes styling to gr
 Jose Padilla - Jose.apadilla99@gmail.com
 
 Project link - [WDTKY-Trivia](https://github.com/JpadillaCoding/WDYKT-Trivia)
+
 
 
 ## Acknowledgments
