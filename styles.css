@@ -54,10 +54,6 @@ html, body {
     cursor: pointer;
     transform: scale(.95);
 }
-.inst-content {
-    justify-content: flex-start;
-    height: 100%;
-}
 .inst-title {
     font-family: 'funky', sans-serif;
     font-size: 40px;
