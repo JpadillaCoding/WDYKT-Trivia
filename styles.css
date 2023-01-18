@@ -17,16 +17,19 @@ html, body {
     url('images/dall.e\ question\ mark.png');
     height: 100%;
 }
+
 .index-title h1 {
     font-size: 5em;
     padding: 20px;
 }
-.index-content, .inst-content{
+.index-content, .inst-content, .game-question-wrapper,.game-answer{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
+}
+.index-content, .inst-content{
     height: 100%;
 }
 .index-title {
@@ -53,6 +56,7 @@ html, body {
 }
 .inst-content {
     justify-content: flex-start;
+    height: 100%;
 }
 .inst-title {
     font-family: 'funky', sans-serif;
@@ -97,14 +101,8 @@ html, body {
 }
 .game-question-wrapper {
     grid-area: game-question-wrapper;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .game-answer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-flow: column;
     padding: 5px;
     border: 2px solid black;
