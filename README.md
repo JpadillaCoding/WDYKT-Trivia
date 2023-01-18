@@ -72,9 +72,9 @@ The function checks for the hard coded `correct` class and changes styling to gr
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ## Contact 
 
-Jose Padilla- Jose.apadilla99@gmail.com
+Jose Padilla - Jose.apadilla99@gmail.com
 
-Project link- [WDTKY-Trivia](https://github.com/JpadillaCoding/WDYKT-Trivia)
+Project link - [WDTKY-Trivia](https://github.com/JpadillaCoding/WDYKT-Trivia)
 
 
 ## Acknowledgments
